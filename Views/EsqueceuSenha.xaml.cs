@@ -6,10 +6,10 @@ namespace NovaVersaoCentralDocs.Views;
 
 public partial class EsqueceuSenha : ContentPage
 {
-	public EsqueceuSenha()
-	{
-		InitializeComponent();
-	}
+    public EsqueceuSenha()
+    {
+        InitializeComponent();
+    }
     public async void Voltar(object sender, EventArgs e)
     {
         if (string.IsNullOrWhiteSpace(EntryEmail.Text))
