@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NovaVersaoCentralDocs.Views.LoginPage"
+    BackgroundColor="#007ACC">
+
+    <ScrollView>
+        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+            <Frame
+                CornerRadius="18"
+                BackgroundColor="White"
+                Padding="25"
+                WidthRequest="500"
+                HasShadow="True"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+
+                <VerticalStackLayout
+                    Spacing="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+
+                    <Image
+                        Source="logo.png"
+                        HeightRequest="155"
+                        WidthRequest="155"
+                        HorizontalOptions="Center"
+                        Aspect="AspectFit"
+                        Margin="0,0,0,5" />
+
+                    <Label
+                        Text="Bem vindo ao CentralDocs"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="Black"
+                        Margin="0,5,0,0" />
+
+                    <Label
+                        Text="Faça Login"
+                        FontSize="15"
+                        HorizontalOptions="Center"
+                        TextColor="Black"
+                        Margin="0,0,0,10" />
+
+                    <Entry
+                        x:Name="EntryLogin"
+                        Placeholder="Login"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        HorizontalOptions="Center"
+                        WidthRequest="250" />
+
+                    <Entry
+                        x:Name="EntrySenha"
+                        Placeholder="Senha"
+                        IsPassword="True"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        HorizontalOptions="Center"
+                        WidthRequest="250" />
+
+                    <Label
+                        Text="Esqueceu sua senha?"
+                        FontSize="13"
+                        HorizontalOptions="Start"
+                        TextColor="#007ACC"
+                        Margin="4,6,0,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EsqueceuSenha" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Button
+                        Text="Entrar"
+                        Clicked="Entrar"
+                        HeightRequest="45"
+                        CornerRadius="22"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        WidthRequest="140"
+                        BackgroundColor="#007ACC"
+                        TextColor="White"
+                        Margin="0,8" />
+
+                    <Label
+                        FontSize="13"
+                        HorizontalOptions="Center"
+                        TextColor="Black"
+                        Margin="0,8,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Não tem conta? " />
+                                <Span Text="Cadastre-se"
+                                      TextColor="#007ACC">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="CadastreSe" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

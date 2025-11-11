@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.Views.TelaPrincipal">
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- TOPO -->
+        <Grid Padding="10" BackgroundColor="#1976D2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <SearchBar 
+                Grid.Column="1"
+                Placeholder="Digite o que você procura..."
+                BackgroundColor="White"
+                Margin="10,10"
+                HeightRequest="40"
+                VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!-- BOTÕES PRINCIPAIS -->
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button 
+                        Clicked="Perfil"
+                        Text="Perfil"
+                        ImageSource="icon_perfil.png"
+                        FontAttributes="Bold"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        CornerRadius="8"
+                        WidthRequest="300"
+                        HeightRequest="80"/>
+
+                    <Button 
+                        Clicked="Documentos"
+                        Text="Documentos"
+                        ImageSource="icon_past.png"
+                        FontAttributes="Bold"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        CornerRadius="8"
+                        WidthRequest="300"
+                        HeightRequest="80"/>
+                </HorizontalStackLayout>
+
+                <!-- TÍTULO -->
+                <Label 
+                    Text="Documentos Recentes"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Margin="0,10,0,5"/>
+
+                <!-- LISTA DE DOCUMENTOS -->
+                <CollectionView ItemsSource="{Binding DocumentosRecentes}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame 
+                BorderColor="#E0E0E0" 
+                CornerRadius="8" 
+                Padding="10" 
+                Margin="0,5">
+                                <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+                                    <Image 
+                        Grid.RowSpan="2" 
+                        Source="{Binding Icon}" 
+                        WidthRequest="24" 
+                        HeightRequest="24" 
+                        VerticalOptions="Center" />
+                                    <Label 
+                        Grid.Column="1" 
+                        Text="{Binding Nome}" 
+                        FontAttributes="Bold" />
+                                    <Label 
+                        Grid.Column="1" 
+                        Grid.Row="1" 
+                        Text="{Binding Info}" 
+                        FontSize="12" 
+                        TextColor="#757575" />
+                                    <ImageButton 
+                        Grid.Column="2" 
+                        Source="icon_arrow.png" 
+                        WidthRequest="24" 
+                        HeightRequest="24"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- RODAPÉ -->
+        <Grid Grid.Row="2" BackgroundColor="#223145" Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout>
+                <Label Text="Institucional" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="Termos de uso" TextColor="White" FontSize="12"/>
+                <Label Text="Acessibilidade" TextColor="White" FontSize="12">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Acessibilidade"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Sobre nós" TextColor="White" FontSize="12"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                <Label Text="Social" TextColor="White" FontAttributes="Bold" Margin="2,0,0,0"/>
+                <HorizontalStackLayout Spacing="2">
+                    <Image Source="icon_instagram.png" WidthRequest="24"/>
+                    <Image Source="icon_whatsapp.png" WidthRequest="24"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="2" HorizontalOptions="End">
+                <Label Text="Baixe nosso App" TextColor="White" FontAttributes="Bold" Margin="50,0,0,0"/>
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="store.png" WidthRequest="100"/>
+                    <Image Source="play.png" WidthRequest="100"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

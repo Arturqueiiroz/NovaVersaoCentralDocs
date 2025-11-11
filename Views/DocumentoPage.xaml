@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.Views.DocumentoPage">
+
+    <Grid RowDefinitions="Auto,*" BackgroundColor="White">
+
+        <!-- TOPO (igual ao da TelaPrincipal) -->
+        <Grid Padding="10" BackgroundColor="#1976D2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Source="logo.png"
+                HeightRequest="90"
+                Aspect="AspectFit" />
+
+            <SearchBar 
+                Grid.Column="1"
+                Placeholder="Pesquisar por documento..."
+                BackgroundColor="White"
+                Margin="10,10"
+                HeightRequest="40"
+                VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="15" Padding="25">
+
+                <!-- TÍTULO -->
+                <Label 
+                    Text="Seus Documentos"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    TextColor="#223145"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,20"/>
+
+                <!-- BOTÕES DE DOCUMENTOS -->
+                <Button Text="CARTEIRA DE IDENTIDADE NACIONAL"
+                        ImageSource="icon_id.png"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="60"
+                        HorizontalOptions="Fill"
+                        ContentLayout="Left,20"/>
+
+                <Button Text="E-TÍTULO"
+                        ImageSource="icon_voto.png"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="60"
+                        HorizontalOptions="Fill"
+                        ContentLayout="Left,20"/>
+
+                <Button Text="CNH"
+                        ImageSource="icon_cnh.png"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="60"
+                        HorizontalOptions="Fill"
+                        ContentLayout="Left,20"/>
+
+                <Button Text="CRLV"
+                        ImageSource="icon_car.png"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="60"
+                        HorizontalOptions="Fill"
+                        ContentLayout="Left,20"/>
+
+                <Button Text="PASSAPORTE"
+                        ImageSource="icon_passaporte.png"
+                        BackgroundColor="#3082D9"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="60"
+                        HorizontalOptions="Fill"
+                        ContentLayout="Left,20"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

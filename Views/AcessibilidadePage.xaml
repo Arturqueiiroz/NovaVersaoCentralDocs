@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.Views.AcessibilidadePage">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- TOPO -->
+        <Grid Padding="10" BackgroundColor="#1976D2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                Aspect="AspectFit" />
+
+            <SearchBar 
+                Grid.Column="1"
+                Placeholder="Digite o que você procura..."
+                BackgroundColor="White"
+                Margin="10,10"
+                HeightRequest="40"
+                VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!-- TÍTULO -->
+                <Label 
+                    Text="Acessibilidade Digital"
+                    FontAttributes="Bold"
+                    FontSize="22"
+                    HorizontalOptions="Center"/>
+
+                <Label 
+                    Text="Acessibilidade e Usuário > Acessibilidade Digital"
+                    FontSize="14"
+                    TextColor="#555"
+                    HorizontalOptions="Center"/>
+
+                <Frame Padding="0" HasShadow="False" BorderColor="Transparent">
+                    <Image 
+                        Source="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/acessibilidade-digital/@@govbr.institucional.banner/d71f19c8-deae-4abc-9399-5547e4574ea6/@@images/b87d2669-cba5-4bec-9215-271d93fa94cd.png" 
+                        Aspect="AspectFill"
+                        HeightRequest="220"
+                        HorizontalOptions="Center"/>
+                </Frame>
+
+                <!-- SEÇÕES DE CONTEÚDO -->
+                <FlexLayout 
+                    Wrap="Wrap" 
+                    JustifyContent="Center" 
+                    AlignItems="Start"
+                    Margin="0,10,0,0">
+                    <Frame WidthRequest="300" BorderColor="#E0E0E0" CornerRadius="8" Margin="5" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="O que é" FontAttributes="Bold" FontSize="18"/>
+                            <Label 
+                                Text="Acessibilidade Digital é a eliminação de barreiras na Web. O conceito pressupõe que os sites sejam projetados para que todas as pessoas possam perceber, entender, navegar e interagir de maneira efetiva."
+                                FontSize="14" TextColor="#333"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame WidthRequest="300" BorderColor="#E0E0E0" CornerRadius="8" Margin="5" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Objetivos" FontAttributes="Bold" FontSize="18"/>
+                            <Label 
+                                Text="• Democratizar o acesso\n• Garantir o entendimento e o controle da navegação dos usuários aos conteúdos e serviços, independentemente de suas capacidades físicas, motoras, perceptivas, culturais ou sociais."
+                                FontSize="14" TextColor="#333"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame WidthRequest="300" BorderColor="#E0E0E0" CornerRadius="8" Margin="5" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="Contexto" FontAttributes="Bold" FontSize="18"/>
+                            <Label 
+                                Text="As barreiras encontradas em sites atingem principalmente pessoas com deficiência. No Brasil, cerca de 45 milhões de pessoas apresentam alguma deficiência, representando 23,9% da população."
+                                FontSize="14" TextColor="#333"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </FlexLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- RODAPÉ -->
+        <Grid Grid.Row="2" BackgroundColor="#223145" Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout>
+                <Label Text="Institucional" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="Termos de uso" TextColor="White" FontSize="12"/>
+                <Label Text="Acessibilidade" TextColor="White" FontSize="12"/>
+                <Label Text="Sobre nós" TextColor="White" FontSize="12"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                <Label Text="Social" TextColor="White" FontAttributes="Bold" Margin="2,0,0,0"/>
+                <HorizontalStackLayout Spacing="2">
+                    <Image Source="icon_instagram.png" WidthRequest="24"/>
+                    <Image Source="icon_whatsapp.png" WidthRequest="24"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="2" HorizontalOptions="End">
+                <Label Text="Baixe nosso App" TextColor="White" FontAttributes="Bold" Margin="50,0,0,0"/>
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="store.png" WidthRequest="100"/>
+                    <Image Source="play.png" WidthRequest="100"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

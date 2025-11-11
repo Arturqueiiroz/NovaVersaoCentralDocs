@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.Views.CadastroPage"
+             BackgroundColor="#007ACC">
+    <ScrollView>
+        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+            <Frame
+                CornerRadius="18"
+                BackgroundColor="White"
+                Padding="25"
+                WidthRequest="500"
+                HasShadow="True"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <VerticalStackLayout
+                    Spacing="5"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+
+                    <Image
+                        Source="logo.png"
+                        HeightRequest="135"
+                        WidthRequest="135"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        Text="Cadastro"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        Margin="0,5,0,0" />
+
+                    <Label
+                        Text="Crie sua conta"
+                        FontSize="15"
+                        TextColor="Black"
+                        Margin="0,0,0,10" />
+                    <Label Text="Nome:" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,5"/>
+                    <Entry
+                        x:Name="EntryNome"
+                        Placeholder="NomeCompleto"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        WidthRequest="250" />
+                    <Label Text="CPF:" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,5"/>
+                    <Entry
+                        x:Name="EntryCpf"
+                        Placeholder="CPF"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        HorizontalOptions="Center"
+                        WidthRequest="250" MaxLength="11"/>
+                    
+                    <Label Text="Email:" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,5"/>
+                    <Entry
+                        x:Name="EntryEmail"
+                        Placeholder="Email"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        HorizontalOptions="Center"
+                        WidthRequest="250" />
+
+                    <Label Text="Senha:" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,5"/>
+                    <Entry
+                        x:Name="EntrySenhaa"
+                        Placeholder="Confirme senha"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        HorizontalOptions="Center"
+                        WidthRequest="250" />
+
+                    <Label Text="Confirme sua senha:" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,5"/>
+                    <Entry
+                        x:Name="EntryConfirme"
+                        Placeholder="Senha"
+                        BackgroundColor="#E6EEF9"
+                        HeightRequest="55"
+                        FontSize="16"
+                        Margin="0,6"
+                        HorizontalOptions="Center"
+                        WidthRequest="250" IsPassword="True" />
+
+                    <Button
+                        Text="Entrar"
+                        Clicked="Entrar"
+                        HeightRequest="45"
+                        CornerRadius="22"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        WidthRequest="140"
+                        BackgroundColor="#007ACC"
+                        TextColor="White"
+                        Margin="0,8" />
+                    <Button
+                        Text="Voltar"
+                        Clicked="Voltar"
+                        HeightRequest="45"
+                        CornerRadius="22"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        WidthRequest="140"
+                        BackgroundColor="#007ACC"
+                        TextColor="White"
+                        Margin="0,8" />
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

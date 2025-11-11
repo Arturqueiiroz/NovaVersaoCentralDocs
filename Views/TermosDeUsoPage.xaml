@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.Views.TermosDeUsoPage"
+             BackgroundColor="#007ACC">
+    <ScrollView>
+        <Grid Padding="15" VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Frame
+                CornerRadius="18"
+                BackgroundColor="White"
+                Padding="10"
+                WidthRequest="500"
+                HasShadow="True"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Image
+                        Source="logo.png"
+                        HeightRequest="190"
+                        WidthRequest="190"
+                        HorizontalOptions="Start"/>
+
+                    <Label 
+                        Text="Termos e Condições"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        Margin="0,0,0,10" />
+
+                    <Label
+                        Text="
+Bem-vindo ao aplicativo CentralDocs! Antes de continuar, leia atentamente os Termos de Uso abaixo.
+Ao utilizar este aplicativo, você declara que leu, compreendeu e concorda integralmente com as condições aqui descritas. Caso não concorde, recomendamos que não utilize o aplicativo.
+
+1. Definições:
+Usuário: pessoa física ou jurídica que acessa ou utiliza a plataforma CentralDocs.
+Administração: entidade responsável por disponibilizar e manter o sistema CentralDocs.
+Serviço ou Plataforma: CentralDocs, seus recursos, funcionalidades e interfaces (web, API, aplicativo etc.).
+Conteúdo: documentos, arquivos e dados inseridos, gerados ou armazenados pelo Usuário ou pela Plataforma.
+
+2. Objeto:
+Este Termo regula o uso da plataforma CentralDocs, incluindo acesso, armazenamento, compartilhamento de documentos, uso de API, funcionalidades de colaboração e demais serviços fornecidos pela Administração.
+
+3. Aceitação do Termo:
+Ao utilizar qualquer funcionalidade da CentralDocs, o Usuário confirma que leu e aceita integralmente este Termo de Uso e suas futuras atualizações. Caso não concorde com os termos, não deverá utilizar a plataforma.
+
+4. Cadastro e Acesso:
+O Usuário deverá fornecer informações verdadeiras e atualizadas. É responsável pela guarda e confidencialidade de suas credenciais. A Administração poderá suspender contas com dados falsos ou atividades suspeitas.
+
+5. Uso e Responsabilidades do Usuário:
+O Usuário compromete-se a seguir a legislação vigente e a LGPD. É proibido armazenar conteúdo ilegal, praticar spam ou violar restrições do sistema.
+
+6. Obrigações da Administração:
+A Administração manterá a plataforma disponível e segura, notificando o Usuário em caso de incidentes.
+
+7. Propriedade Intelectual:
+O Usuário mantém a titularidade sobre seus conteúdos, concedendo licença técnica limitada à Administração.
+
+8. Tratamento de Dados Pessoais:
+O tratamento segue a LGPD. Dados podem incluir nome, e-mail, documentos e logs de acesso.
+
+9. Alterações deste Termo:
+A Administração poderá alterar este Termo, notificando os Usuários.
+
+10. Suspensão e Cancelamento:
+Contas que descumprirem o Termo poderão ser suspensas ou canceladas.
+
+11. Limitação de Responsabilidade:
+A Administração não se responsabiliza por danos indiretos, exceto em casos de dolo ou culpa grave.
+
+12. Foro e Disposições Finais:
+Controvérsias serão resolvidas preferencialmente por mediação. O foro será o da cidade da Administração."
+                        FontSize="14"
+                        TextColor="Black"
+                        LineBreakMode="WordWrap"
+                        Margin="0,0,0,10" />
+
+                    
+                    <HorizontalStackLayout 
+                        Spacing="15"
+                        HorizontalOptions="Center"
+                        Margin="0,15,0,0">
+
+                        <Button
+                            Text="Aceitar"
+                            BackgroundColor="#007ACC"
+                            TextColor="White"
+                            WidthRequest="120"
+                            CornerRadius="22"
+                            Clicked="AceitarTermos"/>
+
+                        <Button
+                            Text="RecusarTermos"
+                            BackgroundColor="LightGray"
+                            TextColor="Black"
+                            WidthRequest="120"
+                            CornerRadius="22"
+                            Clicked="RecusarTermos"/>
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

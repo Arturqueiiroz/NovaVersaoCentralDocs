@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.Views.PerfilPage">
+    <Grid ColumnDefinitions="200,*">
+
+        <!-- MENU LATERAL -->
+        <VerticalStackLayout BackgroundColor="#1976D2" Padding="15" Spacing="20">
+
+            <Image Source="file:///C:/Users/nicolay.gneves/Downloads/do-utilizador(4).png" HeightRequest="80" HorizontalOptions="Center"/>
+
+            <Label Text="Nome Usuário"            
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+
+            <Button Text="Dados"                  
+                    TextColor="White"
+                    BackgroundColor="#1764B8"
+                    CornerRadius="8"/>
+
+            <Button Text="Menu Principal"
+                    TextColor="White"
+                    BackgroundColor="#1764B8"
+                    CornerRadius="8"/>
+
+            <Button Text="Documentos"
+                    TextColor="White"
+                    BackgroundColor="#1764B8"
+                    CornerRadius="8"/>
+
+            <Button Text="Configurações"
+                    TextColor="White"
+                    BackgroundColor="#1561B5"
+                    CornerRadius="8"/>
+
+            <Button Text="Sair"
+                    TextColor="White"
+                    BackgroundColor="#114F93"
+                    CornerRadius="8"
+                    VerticalOptions="EndAndExpand"/>
+        </VerticalStackLayout>
+
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Column="1" Padding="20">
+            <VerticalStackLayout Spacing="15">
+
+                <Label Text="Configurações"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       TextColor="#1976D2"
+                       HorizontalOptions="Center"/>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Geral" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Preferências da conta" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Notificações" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Gerenciar as configurações de notificações" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                        <VerticalStackLayout>
+                            <Label Text="Tema" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                            <Label Text="Padrão do sistema" FontSize="13" TextColor="#666"/>
+                        </VerticalStackLayout>
+                        <Switch Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="Restaurar" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Restaurar para a configuração padrão" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="Sobre a CentralDocs" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Versão do build, Certificação do dispositivo" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="Termos" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Termos e acordos do dispositivo" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>
