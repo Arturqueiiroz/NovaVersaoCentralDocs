@@ -15,7 +15,11 @@
             <Image
                 Source="logo.png"
                 HeightRequest="90"
-                Aspect="AspectFit" />
+                Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnVoltarTelaInicial"/>
+                </Image.GestureRecognizers>
+            </Image> 
 
             <SearchBar 
                 Grid.Column="1"
