@@ -6,6 +6,7 @@ public partial class TermosDeUsoPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    //teste
     public async void AceitarTermos(object sender, EventArgs e)
     {
         await DisplayAlert("Sucesso", "Cadastro concluído com sucesso!", "OK");
