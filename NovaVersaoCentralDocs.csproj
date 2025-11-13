@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+		<!-- <TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks> -->
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
@@ -62,25 +62,36 @@
 	<ItemGroup>
 	  <AndroidResource Remove="Imagens\**" />
 	  <Compile Remove="Imagens\**" />
+	  <Compile Remove="Views\NovaPasta\**" />
 	  <EmbeddedResource Remove="Imagens\**" />
+	  <EmbeddedResource Remove="Views\NovaPasta\**" />
 	  <MauiCss Remove="Imagens\**" />
+	  <MauiCss Remove="Views\NovaPasta\**" />
 	  <MauiXaml Remove="Imagens\**" />
+	  <MauiXaml Remove="Views\NovaPasta\**" />
 	  <None Remove="Imagens\**" />
+	  <None Remove="Views\NovaPasta\**" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Compile Remove="EsqueceuSenha.xaml.cs" />
+	  <Compile Remove="Views\ConfiguracoesUsuario.xaml.cs" />
 	  <Compile Remove="Views\PerfilUsuarios.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Remove="EsqueceuSenha.xaml" />
+	  <MauiXaml Remove="Views\ConfiguracoesUsuario.xaml" />
 	  <MauiXaml Remove="Views\PerfilUsuarios.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Azure.Identity" Version="1.17.0" />
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -94,9 +105,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CadastroPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\ConfiguracoesUsuario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\DocumentoPage.xaml">
@@ -114,6 +122,9 @@
 	  <MauiXaml Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\MenuPrincipal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\MenuPrincipalUsuario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -126,6 +137,10 @@
 	  <MauiXaml Update="Views\TermosDeUsoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PRIResource Remove="Views\NovaPasta\**" />
 	</ItemGroup>
 
 </Project>

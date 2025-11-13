@@ -22,6 +22,7 @@ public partial class TelaPrincipal : ContentPage
         public string Info { get; set; }
         public string Icon { get; set; }
     }
+
     public async void Acessibilidade(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new AcessibilidadePage());
@@ -33,5 +34,9 @@ public partial class TelaPrincipal : ContentPage
     public async void Documentos(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new DocumentoPage());
+    }
+    public async void MenuPrincipla(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MenuPrincipal());
     }
 }

@@ -26,8 +26,8 @@ public partial class PerfilPage : ContentPage
 	{
 		await Navigation.PushAsync(new LoginPage());
 	}
-    public async void ConfiguracoesUsuario(object sender, EventArgs e)
+    public async void Perfil(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new ConfiguracoesUsuario());
+        await Navigation.PushAsync(new PerfilPage());
     }
 }

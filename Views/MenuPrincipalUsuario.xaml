@@ -15,27 +15,32 @@
                    FontAttributes="Bold"
                    FontSize="16"/>
 
-            <Button Text="Dados"                  
+            <Button Text="Dados" 
+                    Clicked="Dados"
                     TextColor="White"
                     BackgroundColor="#1764B8"
                     CornerRadius="8"/>
 
             <Button Text="Menu Principal"
+                    Clicked="MenuPrincipal"
                     TextColor="White"
                     BackgroundColor="#1764B8"
                     CornerRadius="8"/>
 
             <Button Text="Documentos"
+                    Clicked="Documentos"
                     TextColor="White"
                     BackgroundColor="#1764B8"
                     CornerRadius="8"/>
 
             <Button Text="Configurações"
+                    Clicked="Perfil"
                     TextColor="White"
                     BackgroundColor="#1561B5"
                     CornerRadius="8"/>
 
             <Button Text="Sair"
+                    Clicked="Sair"
                     TextColor="White"
                     BackgroundColor="#114F93"
                     CornerRadius="8"

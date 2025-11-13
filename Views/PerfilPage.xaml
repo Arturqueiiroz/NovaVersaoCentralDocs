@@ -7,7 +7,7 @@
         <!-- MENU LATERAL -->
         <VerticalStackLayout BackgroundColor="#1976D2" Padding="15" Spacing="20">
 
-            <Image Source="file:///C:/Users/nicolay.gneves/Downloads/do-utilizador(4).png" HeightRequest="80" HorizontalOptions="Center"/>
+            <Image Source="https://static.vecteezy.com/system/resources/previews/005/544/753/original/profile-icon-design-free-vector.jpg" HeightRequest="80" HorizontalOptions="Center"/>
 
             <Label Text="Nome Usuário"            
                    HorizontalOptions="Center"
@@ -28,13 +28,13 @@
                     CornerRadius="8"/>
 
             <Button Text="Documentos"
-                    Clicked=" Documentos"
+                    Clicked="Documentos"
                     TextColor="White"
                     BackgroundColor="#1764B8"
                     CornerRadius="8"/>
 
             <Button Text="Configurações"
-                    Clicked="Configuracoes"
+                    Clicked="Perfil"
                     TextColor="White"
                     BackgroundColor="#1561B5"
                     CornerRadius="8"/>

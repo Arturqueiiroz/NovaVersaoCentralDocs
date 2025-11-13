@@ -11,18 +11,30 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Image
+            <Grid>
+                <Image
                 Source="logo.png"
+                Scale="2.0"
                 HeightRequest="100"
+                Margin="150,0,0,0"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
-            <SearchBar 
+                <ImageButton 
+                    Clicked="MenuPrincipla"
+                Grid.Column="2" 
+                Source="menu.png"
+                Margin="0,0,150,0"
+                WidthRequest="5" 
+                HeightRequest="5"/>
+            </Grid>
+
+            <SearchBar
                 Grid.Column="1"
                 Placeholder="Digite o que você procura..."
                 BackgroundColor="White"
-                Margin="10,10"
-                HeightRequest="40"
+                Margin="100,5"
+                HeightRequest="40"                
                 VerticalOptions="Center"/>
         </Grid>
 
@@ -33,8 +45,8 @@
                 <!-- BOTÕES PRINCIPAIS -->
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                     <Button 
-                        Clicked="Perfil"
                         Text="Perfil"
+                        Clicked="Perfil"
                         ImageSource="icon_perfil.png"
                         FontAttributes="Bold"
                         BackgroundColor="#3082D9"
@@ -44,8 +56,8 @@
                         HeightRequest="80"/>
 
                     <Button 
-                        Clicked="Documentos"
                         Text="Documentos"
+                        Clicked="Documentos"
                         ImageSource="icon_past.png"
                         FontAttributes="Bold"
                         BackgroundColor="#3082D9"
@@ -75,13 +87,13 @@
                                     <Image 
                         Grid.RowSpan="2" 
                         Source="{Binding Icon}" 
-                        WidthRequest="24" 
+                        WidthRequest="10" 
                         HeightRequest="24" 
-                        VerticalOptions="Center" />
+                        VerticalOptions="Center"  />
                                     <Label 
                         Grid.Column="1" 
                         Text="{Binding Nome}" 
-                        FontAttributes="Bold" />
+                        FontAttributes="Bold"/>
                                     <Label 
                         Grid.Column="1" 
                         Grid.Row="1" 
@@ -113,10 +125,17 @@
             <VerticalStackLayout>
                 <Label Text="Institucional" TextColor="White" FontAttributes="Bold"/>
                 <Label Text="Termos de uso" TextColor="White" FontSize="12"/>
-                <Label Text="Acessibilidade" TextColor="White" FontSize="12">
+                <Label 
+    Text="Acessibilidade" 
+    TextColor="White" 
+    FontSize="12">
+
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Acessibilidade"/>
+                        <TapGestureRecognizer
+            Tapped="Acessibilidade"
+            NumberOfTapsRequired="1" />
                     </Label.GestureRecognizers>
+
                 </Label>
                 <Label Text="Sobre nós" TextColor="White" FontSize="12"/>
             </VerticalStackLayout>

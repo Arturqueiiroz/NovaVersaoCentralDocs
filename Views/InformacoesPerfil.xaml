@@ -1,12 +1,92 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NovaVersaoCentralDocs.Views.InformacoesPerfil"
-             Title="InformacoesPerfil">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="NovaVersaoCentralDocs.Views.InformacoesPerfil">
+    <Grid ColumnDefinitions="200,*">
+
+        <!-- MENU LATERAL -->
+        <VerticalStackLayout BackgroundColor="#1976D2" Padding="15" Spacing="20">
+
+            <Image Source="file:///C:/Users/nicolay.gneves/Downloads/do-utilizador(4).png" HeightRequest="80" HorizontalOptions="Center"/>
+
+            <Label Text="Nome Usuário"            
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+
+            <Button Text="Dados" 
+                    Clicked="Dados"
+                    TextColor="White"
+                    BackgroundColor="#1764B8"
+                    CornerRadius="8"/>
+
+            <Button Text="Menu Principal"
+                    Clicked="MenuPrincipal"
+                    TextColor="White"
+                    BackgroundColor="#1764B8"
+                    CornerRadius="8"/>
+
+            <Button Text="Documentos"
+                    Clicked="Documentos"
+                    TextColor="White"
+                    BackgroundColor="#1764B8"
+                    CornerRadius="8"/>
+
+            <Button Text="Configurações"
+                    Clicked="Perfil"
+                    TextColor="White"
+                    BackgroundColor="#1561B5"
+                    CornerRadius="8"/>
+
+            <Button Text="Sair"
+                    Clicked="Sair"
+                    TextColor="White"
+                    BackgroundColor="#114F93"
+                    CornerRadius="8"
+                    VerticalOptions="EndAndExpand"/>
+        </VerticalStackLayout>
+
+        <!-- CONTEÚDO -->
+        <ScrollView Grid.Column="1" Padding="20">
+            <VerticalStackLayout Spacing="15">
+
+                <Label Text="Informações do perfil"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       TextColor="#1976D2"
+                       HorizontalOptions="Center"/>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Dados da conta" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="centraldocs123@gmail.com" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Nome" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Lucas Marcos" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="Chave de acesso" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Salvar/Alterar chave de acesso" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="Mudar número" FontAttributes="Bold" FontSize="16" TextColor="#333"/>
+                        <Label Text="Editar número de telefone" FontSize="13" TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
 </ContentPage>
