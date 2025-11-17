@@ -10,4 +10,8 @@ public partial class DocumentoPage : ContentPage
 	{
 		await Navigation.PushAsync(new TelaPrincipal());
     }
+    public async void MenuPrincipla(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MenuPrincipal());
+    }
 }

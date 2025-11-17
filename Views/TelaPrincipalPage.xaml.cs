@@ -6,8 +6,8 @@ public partial class TelaPrincipal : ContentPage
 {
     public ObservableCollection<Documento> DocumentosRecentes { get; set; }
     public TelaPrincipal()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         DocumentosRecentes = new ObservableCollection<Documento>
         {
             new Documento { Nome = "Carteira de Identidade Nacional", Info = "Última visualização: 05/11/2025", Icon = "icon_id.png" },

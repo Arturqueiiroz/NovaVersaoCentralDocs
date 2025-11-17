@@ -5,28 +5,36 @@
 
     <Grid RowDefinitions="Auto,*" BackgroundColor="White">
 
-        <!-- TOPO (igual ao da TelaPrincipal) -->
         <Grid Padding="10" BackgroundColor="#1976D2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Image
+            <Grid>
+                <Image
                 Source="logo.png"
-                HeightRequest="90"
-                Aspect="AspectFit">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVoltarTelaInicial"/>
-                </Image.GestureRecognizers>
-            </Image> 
+                Scale="2.0"
+                HeightRequest="100"
+                Margin="150,0,0,0"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
-            <SearchBar 
+                <ImageButton 
+                Clicked="MenuPrincipla"
+                Grid.Column="2" 
+                Source="menu.png"
+                Margin="0,0,150,0"
+                WidthRequest="5" 
+                HeightRequest="5"/>
+            </Grid>
+
+            <SearchBar
                 Grid.Column="1"
-                Placeholder="Pesquisar por documento..."
+                Placeholder="Digite o que você procura..."
                 BackgroundColor="White"
-                Margin="10,10"
-                HeightRequest="40"
+                Margin="100,5"
+                HeightRequest="40"                
                 VerticalOptions="Center"/>
         </Grid>
 
