@@ -45,11 +45,6 @@ public partial class CadastroPage : ContentPage
             {
                 await Navigation.PushAsync(new TermosDeUsoPage());
             }
-            else
-            {
-                var erro = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("Erro", $"Falha no cadastro:\n{erro}", "OK");
-            }
         }
         catch (Exception ex)
         {

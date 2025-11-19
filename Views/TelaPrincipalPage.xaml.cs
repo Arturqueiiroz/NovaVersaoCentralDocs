@@ -39,4 +39,8 @@ public partial class TelaPrincipal : ContentPage
     {
         await Navigation.PushAsync(new MenuPrincipal());
     }
+    public async void TermosDeUso(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new TermosDeUsoPage());
+    }
 }

@@ -5,38 +5,48 @@
     <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- TOPO -->
-        <Grid Padding="10" BackgroundColor="#1976D2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid>
-                <Image
-                Source="logo.png"
-                Scale="2.0"
-                HeightRequest="100"
-                Margin="150,0,0,0"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
-
-                <ImageButton 
-                    Clicked="MenuPrincipla"
-                Grid.Column="2" 
-                Source="menu.png"
-                Margin="0,0,150,0"
-                WidthRequest="5" 
-                HeightRequest="5"/>
+<Grid Padding="10" HeightRequest="80">
+ 
+            <!-- FUNDO COM GRADIENTE -->
+<Grid.Background>
+<LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+<GradientStop Color="#ffffff" Offset="0.0" />
+<GradientStop Color="#3082D9" Offset="1.0" />
+</LinearGradientBrush>
+</Grid.Background>
+ 
+            <!-- LAYOUT DO TOP BAR -->
+<Grid ColumnDefinitions="Auto,Auto,*,Auto" VerticalOptions="Center">
+ 
+                <!-- MENU AGORA FICA AQUI, NO COMEÇO -->
+<ImageButton 
+            Grid.Column="0"
+            Source="menu.png"
+            WidthRequest="30"
+            HeightRequest="30"
+            BackgroundColor="Transparent"
+            VerticalOptions="Center"
+            HorizontalOptions="Start" />
+ 
+                <!-- LOGO AO LADO DO MENU -->
+<Image
+            Grid.Column="1"
+            Source="logo.png"
+            HeightRequest="200"
+            Aspect="AspectFit"
+            VerticalOptions="Center" />
+ 
+                <!-- SEARCHBAR NO CENTRO -->
+<SearchBar
+            Grid.Column="2"
+            Placeholder="Digite o que você procura..."
+            BackgroundColor="White"
+            Margin="150,0"
+            VerticalOptions="Center"
+            HeightRequest="40"/>
+ 
             </Grid>
-
-            <SearchBar
-                Grid.Column="1"
-                Placeholder="Digite o que você procura..."
-                BackgroundColor="White"
-                Margin="100,5"
-                HeightRequest="40"                
-                VerticalOptions="Center"/>
-        </Grid>
+</Grid>
 
         <!-- CONTEÚDO PRINCIPAL -->
         <ScrollView Grid.Row="1">
@@ -124,7 +134,13 @@
 
             <VerticalStackLayout>
                 <Label Text="Institucional" TextColor="White" FontAttributes="Bold"/>
-                <Label Text="Termos de uso" TextColor="White" FontSize="12"/>
+                <Label Text="Termos de uso" TextColor="White" FontSize="12">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+            Tapped="TermosDeUso"
+            NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
                 <Label 
     Text="Acessibilidade" 
     TextColor="White" 

@@ -4,38 +4,48 @@
              x:Class="NovaVersaoCentralDocs.Views.DocumentoPage">
 
     <Grid RowDefinitions="Auto,*" BackgroundColor="White">
+        <!-- TOPO -->
+        <Grid Padding="10" HeightRequest="80">
 
-        <Grid Padding="10" BackgroundColor="#1976D2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            <!-- FUNDO COM GRADIENTE -->
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#ffffff" Offset="0.0" />
+                    <GradientStop Color="#3082D9" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
 
-            <Grid>
-                <Image
-                Source="logo.png"
-                Scale="2.0"
-                HeightRequest="100"
-                Margin="150,0,0,0"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+            <!-- LAYOUT DO TOP BAR -->
+            <Grid ColumnDefinitions="Auto,Auto,*,Auto" VerticalOptions="Center">
 
+                <!-- MENU AGORA FICA AQUI, NO COMEÇO -->
                 <ImageButton 
-                Clicked="MenuPrincipla"
-                Grid.Column="2" 
-                Source="menu.png"
-                Margin="0,0,150,0"
-                WidthRequest="5" 
-                HeightRequest="5"/>
-            </Grid>
+            Grid.Column="0"
+            Source="menu.png"
+            WidthRequest="30"
+            HeightRequest="30"
+            BackgroundColor="Transparent"
+            VerticalOptions="Center"
+            HorizontalOptions="Start" />
 
-            <SearchBar
-                Grid.Column="1"
-                Placeholder="Digite o que você procura..."
-                BackgroundColor="White"
-                Margin="100,5"
-                HeightRequest="40"                
-                VerticalOptions="Center"/>
+                <!-- LOGO AO LADO DO MENU -->
+                <Image
+            Grid.Column="1"
+            Source="logo.png"
+            HeightRequest="200"
+            Aspect="AspectFit"
+            VerticalOptions="Center" />
+
+                <!-- SEARCHBAR NO CENTRO -->
+                <SearchBar
+            Grid.Column="2"
+            Placeholder="Digite o que você procura..."
+            BackgroundColor="White"
+            Margin="150,0"
+            VerticalOptions="Center"
+            HeightRequest="40"/>
+
+            </Grid>
         </Grid>
 
         <!-- CONTEÚDO PRINCIPAL -->
