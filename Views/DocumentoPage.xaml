@@ -20,6 +20,7 @@
 
                 <!-- MENU AGORA FICA AQUI, NO COMEÇO -->
                 <ImageButton 
+            Clicked="MenuPrincipla"
             Grid.Column="0"
             Source="menu.png"
             WidthRequest="30"
