@@ -22,12 +22,12 @@ public partial class CadastroPage : ContentPage
             await DisplayAlert("Atenção", "Preencha todos os campos!", "OK");
             return;
         }
-
         if (EntrySenhaa.Text != EntryConfirme.Text)
         {
             await DisplayAlert("Erro", "As senhas não conferem!", "OK");
             return;
         }
+
 
         var novoUsuario = new
         {
@@ -43,10 +43,7 @@ public partial class CadastroPage : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                await DisplayAlert("Sucesso", "Cadastro realizado!", "OK");
-
-                // Enviar direto para a tela de login
-                await Navigation.PushAsync(new LoginPage());
+                await Navigation.PushAsync(new TermosDeUsoPage());
             }
             else
             {
