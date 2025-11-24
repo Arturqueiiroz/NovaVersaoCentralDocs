@@ -14,6 +14,7 @@ public partial class CadastroPage : ContentPage
 
     public async void Entrar(object sender, EventArgs e)
     {
+
         if (string.IsNullOrWhiteSpace(EntryNome.Text) ||
             string.IsNullOrWhiteSpace(EntryEmail.Text) ||
             string.IsNullOrWhiteSpace(EntrySenhaa.Text) ||
@@ -27,11 +28,18 @@ public partial class CadastroPage : ContentPage
             await DisplayAlert("Erro", "As senhas não conferem!", "OK");
             return;
         }
+        if (EntryCpf.Text.Length != 11)
+        {
+            await DisplayAlert("Erro", "O CPF deve ter 11 números.", "OK");
+            return;
+        }
+
 
 
         var novoUsuario = new
         {
             NomeCompleto = EntryNome.Text,
+            CPF = EntryCpf.Text,
             Email = EntryEmail.Text,
             PassWordHash = EntrySenhaa.Text
         };
@@ -44,6 +52,11 @@ public partial class CadastroPage : ContentPage
             if (response.IsSuccessStatusCode)
             {
                 await Navigation.PushAsync(new TermosDeUsoPage());
+            }
+            else
+            {
+                var erro = await response.Content.ReadAsStringAsync();
+                await DisplayAlert("Erro da API", erro, "OK");
             }
         }
         catch (Exception ex)
