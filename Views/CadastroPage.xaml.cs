@@ -28,11 +28,6 @@ public partial class CadastroPage : ContentPage
             await DisplayAlert("Erro", "As senhas não conferem!", "OK");
             return;
         }
-        if (EntryCpf.Text.Length != 11)
-        {
-            await DisplayAlert("Erro", "O CPF deve ter 11 números.", "OK");
-            return;
-        }
 
 
 

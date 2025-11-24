@@ -14,4 +14,8 @@ public partial class DocumentoPage : ContentPage
     {
         await Navigation.PushAsync(new MenuPrincipal());
     }
+	public async void Voltar(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new TelaPrincipal());
+	}
 }

@@ -4,117 +4,194 @@
              x:Class="NovaVersaoCentralDocs.Views.DocumentoPage">
 
     <Grid RowDefinitions="Auto,*" BackgroundColor="White">
-        <!-- TOPO -->
-        <Grid Padding="10" HeightRequest="80">
 
-            <!-- FUNDO COM GRADIENTE -->
+        <!-- ========================================================= -->
+        <!--                           TOPO                            -->
+        <!-- ========================================================= -->
+        <Grid Padding="10" HeightRequest="80">
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                    <GradientStop Color="#ffffff" Offset="0.0" />
+                    <GradientStop Color="#FFFFFF" Offset="0.0" />
                     <GradientStop Color="#3082D9" Offset="1.0" />
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <!-- LAYOUT DO TOP BAR -->
             <Grid ColumnDefinitions="Auto,Auto,*,Auto" VerticalOptions="Center">
 
-                <!-- MENU AGORA FICA AQUI, NO COMEÇO -->
-                <ImageButton 
-            Clicked="MenuPrincipla"
-            Grid.Column="0"
-            Source="menu.png"
-            WidthRequest="30"
-            HeightRequest="30"
-            BackgroundColor="Transparent"
-            VerticalOptions="Center"
-            HorizontalOptions="Start" />
+                <ImageButton Grid.Column="0"
+                             WidthRequest="30"
+                             HeightRequest="30"
+                             BackgroundColor="Transparent"
+                             Source="menu.png"
+                             Clicked="MenuPrincipla"/>
 
-                <!-- LOGO AO LADO DO MENU -->
-                <Image
-            Grid.Column="1"
-            Source="logo.png"
-            HeightRequest="200"
-            Aspect="AspectFit"
-            VerticalOptions="Center" />
+                <Image Grid.Column="1"
+                       HeightRequest="200"
+                       VerticalOptions="Center"
+                       Aspect="AspectFit"
+                       Source="logo.png"/>
 
-                <!-- SEARCHBAR NO CENTRO -->
-                <SearchBar
-            Grid.Column="2"
-            Placeholder="Digite o que você procura..."
-            BackgroundColor="White"
-            Margin="150,0"
-            VerticalOptions="Center"
-            HeightRequest="40"/>
-
+                <SearchBar Grid.Column="2"
+                           Placeholder="Digite o que você procura..."
+                           BackgroundColor="White"
+                           Margin="150,0"
+                           HeightRequest="40"
+                           VerticalOptions="Center"/>
             </Grid>
         </Grid>
 
-        <!-- CONTEÚDO PRINCIPAL -->
+
+        <!-- ========================================================= -->
+        <!--                      CONTEÚDO                             -->
+        <!-- ========================================================= -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Spacing="15" Padding="25">
+            <VerticalStackLayout Spacing="18" Padding="25">
 
-                <!-- TÍTULO -->
-                <Label 
-                    Text="Seus Documentos"
-                    FontSize="22"
-                    FontAttributes="Bold"
-                    TextColor="#223145"
-                    HorizontalOptions="Center"
-                    Margin="0,10,0,20"/>
+                <Label Text="Seus Documentos"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       TextColor="#223145"
+                       HorizontalOptions="Center"
+                       Margin="0,10,0,20" />
 
-                <!-- BOTÕES DE DOCUMENTOS -->
-                <Button Text="CARTEIRA DE IDENTIDADE NACIONAL"
-                        ImageSource="icon_id.png"
-                        BackgroundColor="#3082D9"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="12"
-                        HeightRequest="60"
-                        HorizontalOptions="Fill"
-                        ContentLayout="Left,20"/>
+                <Frame BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="18"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions="*,Auto"
+                          RowDefinitions="Auto,Auto">
 
-                <Button Text="E-TÍTULO"
-                        ImageSource="icon_voto.png"
-                        BackgroundColor="#3082D9"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="12"
-                        HeightRequest="60"
-                        HorizontalOptions="Fill"
-                        ContentLayout="Left,20"/>
+                        <Label Grid.Row="0"
+                               Text="Carteira de Identidade Nacional"
+                               FontSize="17"
+                               FontAttributes="Bold"
+                               TextColor="#1E2A36"/>
 
-                <Button Text="CNH"
-                        ImageSource="icon_cnh.png"
-                        BackgroundColor="#3082D9"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="12"
-                        HeightRequest="60"
-                        HorizontalOptions="Fill"
-                        ContentLayout="Left,20"/>
+                        <Label Grid.Row="1"
+                               Text="Clique para ver seu documento"
+                               FontSize="13"
+                               TextColor="#7A8696"/>
 
-                <Button Text="CRLV"
-                        ImageSource="icon_car.png"
-                        BackgroundColor="#3082D9"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="12"
-                        HeightRequest="60"
-                        HorizontalOptions="Fill"
-                        ContentLayout="Left,20"/>
+                        <ImageButton Grid.Column="1"
+                                     Grid.RowSpan="2"
+                                     Source="icon_arrow.png"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="26"
+                                     HeightRequest="26"/>
+                    </Grid>
+                </Frame>
 
-                <Button Text="PASSAPORTE"
-                        ImageSource="icon_passaporte.png"
-                        BackgroundColor="#3082D9"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        CornerRadius="12"
-                        HeightRequest="60"
-                        HorizontalOptions="Fill"
-                        ContentLayout="Left,20"/>
+                <Frame BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="18"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions="*,Auto"
+                          RowDefinitions="Auto,Auto">
 
+                        <Label Grid.Row="0"
+                               Text="E-Título"
+                               FontSize="17"
+                               FontAttributes="Bold"
+                               TextColor="#1E2A36"/>
+
+                        <Label Grid.Row="1"
+                               Text="Clique para ver seu e-Título"
+                               FontSize="13"
+                               TextColor="#7A8696"/>
+
+                        <ImageButton Grid.Column="1"
+                                     Grid.RowSpan="2"
+                                     Source="icon_arrow.png"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="26"
+                                     HeightRequest="26" />
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="18"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions="*,Auto"
+                          RowDefinitions="Auto,Auto">
+
+                        <Label Grid.Row="0"
+                               Text="CNH"
+                               FontSize="17"
+                               FontAttributes="Bold"
+                               TextColor="#1E2A36"/>
+
+                        <Label Grid.Row="1"
+                               Text="Clique para acessar sua CNH"
+                               FontSize="13"
+                               TextColor="#7A8696"/>
+
+                        <ImageButton Grid.Column="1"
+                                     Grid.RowSpan="2"
+                                     Source="icon_arrow.png"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="26"
+                                     HeightRequest="26"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="18"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions="*,Auto"
+                          RowDefinitions="Auto,Auto">
+
+                        <Label Grid.Row="0"
+                               Text="CRLV"
+                               FontSize="17"
+                               FontAttributes="Bold"
+                               TextColor="#1E2A36"/>
+
+                        <Label Grid.Row="1"
+                               Text="Documento do veículo"
+                               FontSize="13"
+                               TextColor="#7A8696"/>
+
+                        <ImageButton Grid.Column="1"
+                                     Grid.RowSpan="2"
+                                     Source="icon_arrow.png"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="26"
+                                     HeightRequest="26"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="18"
+                       HasShadow="True">
+                    <Grid ColumnDefinitions="*,Auto"
+                          RowDefinitions="Auto,Auto">
+
+                        <Label Grid.Row="0"
+                               Text="Passaporte"
+                               FontSize="17"
+                               FontAttributes="Bold"
+                               TextColor="#1E2A36"/>
+
+                        <Label Grid.Row="1"
+                               Text="Clique para abrir seu passaporte"
+                               FontSize="13"
+                               TextColor="#7A8696"/>
+
+                        <ImageButton Grid.Column="1"
+                                     Grid.RowSpan="2"
+                                     Source="icon_arrow.png"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="26"
+                                     HeightRequest="26"/>
+                    </Grid>
+                </Frame>
+                <Button Text="Voltar" Clicked="Voltar" BackgroundColor="#3082D9">
+                    
+                </Button>
             </VerticalStackLayout>
         </ScrollView>
-
     </Grid>
 </ContentPage>
