@@ -5,8 +5,7 @@
     <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- TOPO -->
-<Grid Padding="10" HeightRequest="80">
-            <!-- teste -->
+        <Grid Padding="10" HeightRequest="80">
 
             <!-- FUNDO COM GRADIENTE -->
 <Grid.Background>
