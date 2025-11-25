@@ -38,14 +38,16 @@
             VerticalOptions="Center" />
  
                 <!-- SEARCHBAR NO CENTRO -->
-<SearchBar
-            Grid.Column="2"
-            Placeholder="Digite o que você procura..."
-            BackgroundColor="White"
-            Margin="150,0"
-            VerticalOptions="Center"
-            HeightRequest="40"/>
- 
+                <SearchBar
+    x:Name="BarraDePesquisa"
+    Grid.Column="2"
+    Placeholder="Digite o que você procura..."
+    BackgroundColor="White"
+    Margin="150,0"
+    VerticalOptions="Center"
+    HeightRequest="40"
+    SearchButtonPressed="Pesquisar"/>
+
             </Grid>
 </Grid>
 

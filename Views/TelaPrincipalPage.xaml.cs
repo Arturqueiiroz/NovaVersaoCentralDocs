@@ -22,6 +22,28 @@ public partial class TelaPrincipal : ContentPage
         public string Info { get; set; }
         public string Icon { get; set; }
     }
+    private void Pesquisar(object sender, EventArgs e)
+    {
+        string termo = BarraDePesquisa.Text;
+
+        if (string.IsNullOrWhiteSpace(termo))
+        {
+            return;
+        }
+
+        // Aqui você decide o que quer fazer com o termo
+        DisplayAlert("Busca", $"Você pesquisou por: {termo}", "OK");
+
+        // Se quiser filtrar os documentos exibidos:
+        // var filtrados = ViewModel.DocumentosRecentes
+        //     .Where(d => d.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase))
+        //     .ToList();
+        // 
+        // CollectionViewDocumentos.ItemsSource = filtrados;
+
+        // Ou navegar para uma página de resultados:
+        // await Navigation.PushAsync(new PaginaResultados(termo));
+    }
 
     public async void Acessibilidade(object sender, EventArgs e)
     {
